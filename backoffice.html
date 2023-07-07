@@ -18,8 +18,12 @@
     html {
       font-family: monospace;
     }
+  
+    body {
+      height: 100vh;
+    }
   </style>
-  <body class="bg-body-tertiary">
+  <body class="bg-body-tertiary d-flex flex-column">
     <header>
       <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
@@ -66,7 +70,7 @@
         </div>
       </nav>
     </header>
-    <main class="bg-warning-subtle pb-5">
+    <main class="bg-warning-subtle pb-5 flex-grow-1">
       <div class="d-flex justify-content-center">
         <a href="index.html" class="text-center"
           ><img
@@ -75,7 +79,7 @@
             alt=""
         /></a>
       </div>
-      <div class="container">
+      <div class="container d-flex flex-column flex-grow-1">
         <h1 class="text-center my-4">Admin</h1>
         <div class="row justify-content-center">
           <div
