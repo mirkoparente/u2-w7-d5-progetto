@@ -30,7 +30,7 @@ const fetchDetails = function () {
 
       console.log(data);
       const divCol = document.createElement("div");
-      divCol.classList.add("col","col-12","col-md-6");
+      divCol.classList.add("col", "col-12", "col-md-6");
       divCol.innerHTML = `<div class="card border border-warning ">
           
           <img src="${data.imageUrl}" class="card-img-top" alt="dettagli prodotto">
@@ -50,7 +50,6 @@ const fetchDetails = function () {
 
       let deleteButton = document.querySelector(".bg-danger");
       deleteButton.addEventListener("click", function () {
-        
         if (confirm("Sei sicuro di eliminare il prodotto?")) {
           fetch(url + id, {
             method: "DELETE",
@@ -84,5 +83,5 @@ const fetchDetails = function () {
 };
 fetchDetails();
 
-const anno=new Date().getFullYear()
-document.getElementById("data").innerHTML=`${anno}`
+const anno = new Date().getFullYear();
+document.getElementById("data").innerHTML = `${anno}`;

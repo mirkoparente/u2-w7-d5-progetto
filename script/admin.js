@@ -9,7 +9,7 @@ console.log(url + id);
 const fetchProducts = function () {
   if (id) {
     document.querySelector(".btn-primary").innerText = "Modifica evento";
-    document.querySelector("h1").innerText = "Crudazon - Admin - Modifica ";
+    document.querySelector("h1").innerText = "Admin - Modifica ";
 
     fetch(url + id, {
       headers: {
@@ -53,11 +53,11 @@ const fetchProducts = function () {
   const priceProduct = document.getElementById("product-price");
 
   // form reset
-  form.addEventListener("reset",function(e){
-    if(!confirm("Sei sicuro di resettare tutto?")){
-        e.preventDefault()
+  form.addEventListener("reset", function (e) {
+    if (!confirm("Sei sicuro di resettare tutto?")) {
+      e.preventDefault();
     }
-  })
+  });
 
   //form submit
   form.addEventListener("submit", function (e) {
@@ -117,5 +117,5 @@ const fetchProducts = function () {
 };
 fetchProducts();
 
-const anno=new Date().getFullYear()
-document.getElementById("data").innerHTML=`${anno}`
+const anno = new Date().getFullYear();
+document.getElementById("data").innerHTML = `${anno}`;

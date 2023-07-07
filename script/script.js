@@ -20,11 +20,15 @@ const fetchProducts = function () {
       spinner.classList.add("d-none");
       //riferimento row
       const row = document.getElementById("row");
+      const p = document.createElement("p");
+      p.innerHTML = ` <p class="fs-4 fw-bold text-warning">In Evidenza</p>
+      <hr class="text-warning">`;
+      row.appendChild(p);
       console.log("dati", data);
       data.forEach((prodotti) => {
         console.log(prodotti);
         const divCol = document.createElement("div");
-        divCol.classList.add("col","col-12", "col-sm-6", "col-lg-2","g-4");
+        divCol.classList.add("col", "col-12", "col-sm-6", "col-lg-2", "g-4");
         divCol.innerHTML = `<div class="card border border-warning h-100">
         <div class="h-75">
         <a href="./details.html?id=${prodotti._id}"><img src="${prodotti.imageUrl}" class="card-img-top h-100 w-100" alt="immagine prodotti"></a>
@@ -37,7 +41,8 @@ const fetchProducts = function () {
           <a href="./backoffice.html?id=${prodotti._id}" class="btn bg-warning">Modifica</a>
           </div>
         </div>
-      </div>`;
+        </div>`;
+
         row.appendChild(divCol);
       });
     })
@@ -47,5 +52,5 @@ const fetchProducts = function () {
 };
 fetchProducts();
 
-const anno=new Date().getFullYear()
-document.getElementById("data").innerHTML=`${anno}`
+const anno = new Date().getFullYear();
+document.getElementById("data").innerHTML = `${anno}`;
